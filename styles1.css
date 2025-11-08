@@ -1,0 +1,335 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    position: relative;
+    min-height: 100vh;
+    background-color: #E2B25C;
+}
+
+/* Navigation Bar */
+#navbar {
+    background-color: #000000;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#navbar ul li {
+    display: inline;
+}
+
+#navbar ul li a {
+    color: #FFFFFF;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+#navbar ul li a:hover {
+    background-color: #EDC472;
+}
+
+/* Burger Menu Icon */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #navbar ul {
+        flex-direction: column;
+        width: 100%;
+        display: none; 
+    }
+
+    #navbar ul.active {
+        display: flex; 
+    }
+
+    #navbar ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+}
+
+
+/* Discover Page Styles */
+#discover-content {
+    padding: 10px;
+    max-width: 1100px;
+    margin: 100px auto 20px auto;
+    color: #FFFFFF;
+    box-sizing: border-box;
+}
+
+#discover-content h1, #discover-content h2 {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+#discover-content p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    text-align: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.discover-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* Heroes Page Styles */
+#heroes-content {
+    text-align: center;
+    padding: 20px;
+    max-width: 900px;
+    margin: 100px auto 20px auto;
+    color: #FFFFFF;
+    box-sizing: border-box;
+}
+
+#heroes-content h1, #heroes-content h2 {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+#heroes-content p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+/* Gameplay Page Specific Styles */
+#gameplay-content {
+    text-align: center;
+    padding: 20px;
+    max-width: 1100px;
+    margin: 120px auto 20px auto;
+    color: #FFFFFF;
+    box-sizing: border-box;
+}
+
+#gameplay-content h1, #gameplay-content h2 {
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#gameplay-content .intro-text {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #FFFFFF;
+}
+
+/* Video Container Styling */
+.gameplay-video {
+    width: 100%;
+    max-width: 900px; 
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+#gameplay-content p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Video Container Styling for All Pages */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: #000;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #discover-content, #heroes-content, #gameplay-content {
+        padding: 10px;
+        margin: 120px 10px 20px 10px;
+    }
+
+    .video-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-container, .small-video {
+        width: 100%; 
+    }
+}
+
+/* Gameplay Content - Additional Styles for Small Videos */
+.small-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 48%; 
+    background-color: #000;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.small-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.video-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+/* Contact Page Styles */
+#contact {
+    background-color: #E2B25C;
+    color: #130D02;
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 80px;
+}
+
+#contact h1, #contact h2 {
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 1.2em;
+    margin-top: 100px; 
+    margin-bottom: 60px; 
+}
+
+#contact .socials {
+    list-style-type: none;
+    padding: 0;
+    margin: 60px; /
+}
+
+#contact .socials li {
+    display: inline-block;
+    margin: 0 15px; 
+}
+
+#contact .socials li a {
+    color: #FFFFFF;
+    background-color: #130D02;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin: 10px 0; 
+}
+
+#contact .socials li a:hover {
+    background-color: #EDC472;
+}
+
+/* Play Music Button */
+#play-music-section {
+    margin-top: 60px; 
+}
+
+#contact button {
+    background-color: #130D02;
+    color: #FFFFFF;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+#contact button:hover {
+    background-color: #EDC472;
+}
+
+#contact h1 {
+    font-size: 2.5em;
+    margin-top: 20px; 
+}
+
+#contact p, #contact .socials {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto; 
+    margin-top: 30px; 
+    margin-bottom: 7px; 
+}
+
+#contact h2{
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto; 
+    margin-top: 60px; 
+    margin-bottom: 20px; 
+}

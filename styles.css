@@ -1,0 +1,185 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Background Video */
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -2;
+    object-fit: cover;
+}
+
+/* Dark Filter over Video */
+#video-overlay {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark filter */
+    z-index: -1;
+}
+
+/* Navigation Bar */
+#navbar {
+    background-color: #000000;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#navbar ul li {
+    display: inline;
+}
+
+#navbar ul li a {
+    color: #FFFFFF;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+#navbar ul li a:hover {
+    background-color: #EDC472;
+}
+
+/* Burger Menu Icon */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #navbar ul {
+        flex-direction: column;
+        width: 100%;
+        display: none; /* Hide the menu by default */
+    }
+
+    #navbar ul.active {
+        display: flex; /* Show the menu when active */
+    }
+
+    #navbar ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+}
+
+
+/* Main Content with centered layout */
+#main-content {
+    text-align: center;
+    margin-top: 100px; /* Ensure the content is below the navbar */
+}
+
+#game-logo {
+    width: 600px; 
+    margin-bottom: 20px;
+}
+
+/* Download Button */
+.download-btn {
+    display: block;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 15px 0; 
+    width: 300px; 
+    text-decoration: none;
+    font-size: 1.5em; 
+    font-weight: bold; 
+    border-radius: 10px;
+    margin: 0 auto; 
+    text-align: center;
+}
+
+.download-btn:hover {
+    background-color: #EDC472;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #game-logo {
+        width: 200px; /* Adjust for smaller screens */
+    }
+
+    .download-btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+/* Discover Content Styles */
+#discover-content {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #FFFFFF;
+}
+
+#discover-content h1, #discover-content h2 {
+    color: #E2B25C;
+    text-align: center;
+}
+
+#discover-content p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.discover-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #E2B25C;
+}
+
